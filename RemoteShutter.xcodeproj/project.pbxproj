@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		FBB415282DE20CF100B99019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBB415122DE20CEB00B99019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBB415192DE20CEB00B99019;
+			remoteInfo = RemoteShutter;
+		};
+		FBB415322DE20CF100B99019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBB415122DE20CEB00B99019 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBB415192DE20CEB00B99019;
+			remoteInfo = RemoteShutter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FBB4151A2DE20CEB00B99019 /* RemoteShutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteShutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB415272DE20CF100B99019 /* RemoteShutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteShutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB415312DE20CF100B99019 /* RemoteShutterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemoteShutterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FB3D54BD2DE5F38B0026EBDA /* Exceptions for "RemoteShutter" folder in "RemoteShutter" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FBB415192DE20CEB00B99019 /* RemoteShutter */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FBB4151C2DE20CEB00B99019 /* RemoteShutter */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FB3D54BD2DE5F38B0026EBDA /* Exceptions for "RemoteShutter" folder in "RemoteShutter" target */,
+			);
+			path = RemoteShutter;
+			sourceTree = "<group>";
+		};
+		FBB4152A2DE20CF100B99019 /* RemoteShutterTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RemoteShutterTests;
+			sourceTree = "<group>";
+		};
+		FBB415342DE20CF100B99019 /* RemoteShutterUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RemoteShutterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBB415172DE20CEB00B99019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB415242DE20CF100B99019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB4152E2DE20CF100B99019 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBB415112DE20CEB00B99019 = {
+			isa = PBXGroup;
+			children = (
+				FBB4151C2DE20CEB00B99019 /* RemoteShutter */,
+				FBB4152A2DE20CF100B99019 /* RemoteShutterTests */,
+				FBB415342DE20CF100B99019 /* RemoteShutterUITests */,
+				FBB4151B2DE20CEB00B99019 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBB4151B2DE20CEB00B99019 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4151A2DE20CEB00B99019 /* RemoteShutter.app */,
+				FBB415272DE20CF100B99019 /* RemoteShutterTests.xctest */,
+				FBB415312DE20CF100B99019 /* RemoteShutterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBB415192DE20CEB00B99019 /* RemoteShutter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB4153B2DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutter" */;
+			buildPhases = (
+				FBB415162DE20CEB00B99019 /* Sources */,
+				FBB415172DE20CEB00B99019 /* Frameworks */,
+				FBB415182DE20CEB00B99019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FBB4151C2DE20CEB00B99019 /* RemoteShutter */,
+			);
+			name = RemoteShutter;
+			packageProductDependencies = (
+			);
+			productName = RemoteShutter;
+			productReference = FBB4151A2DE20CEB00B99019 /* RemoteShutter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FBB415262DE20CF100B99019 /* RemoteShutterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB4153E2DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutterTests" */;
+			buildPhases = (
+				FBB415232DE20CF100B99019 /* Sources */,
+				FBB415242DE20CF100B99019 /* Frameworks */,
+				FBB415252DE20CF100B99019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBB415292DE20CF100B99019 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FBB4152A2DE20CF100B99019 /* RemoteShutterTests */,
+			);
+			name = RemoteShutterTests;
+			packageProductDependencies = (
+			);
+			productName = RemoteShutterTests;
+			productReference = FBB415272DE20CF100B99019 /* RemoteShutterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBB415302DE20CF100B99019 /* RemoteShutterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBB415412DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutterUITests" */;
+			buildPhases = (
+				FBB4152D2DE20CF100B99019 /* Sources */,
+				FBB4152E2DE20CF100B99019 /* Frameworks */,
+				FBB4152F2DE20CF100B99019 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBB415332DE20CF100B99019 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FBB415342DE20CF100B99019 /* RemoteShutterUITests */,
+			);
+			name = RemoteShutterUITests;
+			packageProductDependencies = (
+			);
+			productName = RemoteShutterUITests;
+			productReference = FBB415312DE20CF100B99019 /* RemoteShutterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBB415122DE20CEB00B99019 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					FBB415192DE20CEB00B99019 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					FBB415262DE20CF100B99019 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FBB415192DE20CEB00B99019;
+					};
+					FBB415302DE20CF100B99019 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = FBB415192DE20CEB00B99019;
+					};
+				};
+			};
+			buildConfigurationList = FBB415152DE20CEB00B99019 /* Build configuration list for PBXProject "RemoteShutter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBB415112DE20CEB00B99019;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FBB4151B2DE20CEB00B99019 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBB415192DE20CEB00B99019 /* RemoteShutter */,
+				FBB415262DE20CF100B99019 /* RemoteShutterTests */,
+				FBB415302DE20CF100B99019 /* RemoteShutterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBB415182DE20CEB00B99019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB415252DE20CF100B99019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB4152F2DE20CF100B99019 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBB415162DE20CEB00B99019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB415232DE20CF100B99019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB4152D2DE20CF100B99019 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FBB415292DE20CF100B99019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBB415192DE20CEB00B99019 /* RemoteShutter */;
+			targetProxy = FBB415282DE20CF100B99019 /* PBXContainerItemProxy */;
+		};
+		FBB415332DE20CF100B99019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FBB415192DE20CEB00B99019 /* RemoteShutter */;
+			targetProxy = FBB415322DE20CF100B99019 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FBB415392DE20CF100B99019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FBB4153A2DE20CF100B99019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FBB4153C2DE20CF100B99019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YYD4VDJCJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RemoteShutter/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth to connect to pi";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FBB4153D2DE20CF100B99019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9YYD4VDJCJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RemoteShutter/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth to connect to pi";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FBB4153F2DE20CF100B99019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteShutter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RemoteShutter";
+			};
+			name = Debug;
+		};
+		FBB415402DE20CF100B99019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemoteShutter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RemoteShutter";
+			};
+			name = Release;
+		};
+		FBB415422DE20CF100B99019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemoteShutter;
+			};
+			name = Debug;
+		};
+		FBB415432DE20CF100B99019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cbalmaceda40gmail.com.RemoteShutterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemoteShutter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBB415152DE20CEB00B99019 /* Build configuration list for PBXProject "RemoteShutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB415392DE20CF100B99019 /* Debug */,
+				FBB4153A2DE20CF100B99019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB4153B2DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB4153C2DE20CF100B99019 /* Debug */,
+				FBB4153D2DE20CF100B99019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB4153E2DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB4153F2DE20CF100B99019 /* Debug */,
+				FBB415402DE20CF100B99019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBB415412DE20CF100B99019 /* Build configuration list for PBXNativeTarget "RemoteShutterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBB415422DE20CF100B99019 /* Debug */,
+				FBB415432DE20CF100B99019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBB415122DE20CEB00B99019 /* Project object */;
+}
