@@ -12,7 +12,6 @@ import SwiftUI
 struct Buttons: View{
     let title: String
     let action: () -> Void
-    
     var body: some View {
         Button{
             action()
@@ -36,30 +35,47 @@ struct ContentView: View {
     @State private var isShowingSheet = false
     @State private var filename: String = ""
     @State private var image: Data? = nil
-    
+    @State var  unprocessedResponse: String = ""
+    @State var fileList: [String] = []
     
     var body: some View {
         VStack {
-            //ifconfig
+            
+            Buttons(title: "test separate file func"){
+                Task{
+                    unprocessedResponse = await sendCmdRewrite(command: "ls /samba")
+                    fileList = unprocessedResponse.components(separatedBy: "\n").filter({!$0.isEmpty})
+                    print(fileList)
+                }
+            }
+            //test button
+            Buttons(title: "test button"){
+                Task{
+                    output = await sendCmdRewrite(command:"ls /samba")
+                    print(output)
+                }}
             Buttons(title: "check ip"){
-                sendCommand(command:"ifconfig"){result in
-            output = result}}
+                Task{
+                    output = await sendCmdRewrite(command:"ifconfig")
+                    
+                }}
             //ping the pi
             Buttons(title: "check ping"){
-                sendCommand(command:"ping ceejpi.local -c 3"){result in
-            output = result}}
+                Task{
+                    output = await sendCmdRewrite(command:"ping ceejpi.local -c 3")
+                }}
             //check camera connection
             Buttons(title: "Check Camera"){
-                sendCommand(command:"gphoto2 --auto-detect"){result in
-            output = result}}
-            //take flick``
+                Task{
+                    output = await sendCmdRewrite(command:"gphoto2 --auto-detect")
+                }}            //take flick``
             Buttons(title: "Capture Image"){
                 let time = getTime()
-//                debugPrint(time.hour)
+                //                debugPrint(time.hour)
                 filename = "/samba/\(time.hour)-\(time.min)-\(time.sec).cr2"
-//                print("filename: \(filename)")
-                sendCommand(command:"sudo gphoto2 --filename '\(filename)' --capture-image-and-download"){result in
-            output = result}}
+                Task{
+                    output = await sendCmdRewrite(command:"sudo gphoto2 --filename '\(filename)' --capture-image-and-download")
+                }}
             //
             Buttons(title: "Capture Image w/ Timer"){
                 
@@ -69,15 +85,10 @@ struct ContentView: View {
                 Button("Submit"){
                     let time = getTime()
                     filename = "/samba/\(time.hour)-\(time.min)-\(time.sec).cr2"
-//                    sendCommand(command:"sudo gphoto2 --wait-event=" + seconds + "s --filename '/samba/\(time.hour)-\(time.min)-\(time.sec).%C' --capture-image-and-download"){result in
-//                    output = result}
-//                }
-                sendCommand(command:"sudo gphoto2 --wait-event=" + seconds + "s --filename '\(filename)' --capture-image-and-download"){result in
-                output = result}
-            }
-                Button("Cancel", role: .cancel){
-                    
-                }
+                    Task{
+                        output = await sendCmdRewrite(command:"sudo gphoto2 --wait-event=" + seconds + "s --filename '\(filename)' --capture-image-and-download")
+                    }}
+                Button("Cancel", role: .cancel){}
             } message: {
                 Text("Enter a number to set timer ")
             }
@@ -90,17 +101,19 @@ struct ContentView: View {
                     }else{
                         Text("loading").onAppear{
                             Task {
-                                    print("fetching image")
-                                    image = await getPicture(filePath: filename)
-                                    
-                                    if let image = image {
-                                        print("image loaded: \(image.count) bytes")
-                                    } else {
-                                        print("image failed to load :(")
-                                    }
+                                print("fetching image")
+                                image = await getPicture(filePath: filename)
+                                
+                                if let image = image {
+                                    print("image loaded: \(image.count) bytes")
+                                } else {
+                                    print("image failed to load :(")
                                 }
+                            }
                         }
                     }
+                }.onAppear{
+                    image = nil
                 }
             }
             
@@ -109,32 +122,27 @@ struct ContentView: View {
                 isShowingShutdown = true
             }.alert("Shutdown", isPresented: $isShowingShutdown){
                 Button("Shutdown"){
-                    sendCommand(command:"sudo shutdown -h now"){result in
-                    output = result}
+                    Task{
+                        output = await sendCmdRewrite(command:"sudo shutdown -h now")
+                    }
                 }
                 Button("Cancel", role: .cancel){
                     
                 }
             }
-            
-            
-            
 
-            //sendCommand(command:"sudo gphoto2 --wait-event=5s --filename '/samba/%H-%M-%S.%C' --capture-image-and-download"){result in
-//            output = result}
-            
             ScrollView{
                 Text(output)
-                        .padding()
-                        .foregroundColor(.gray)
+                    .padding()
+                    .foregroundColor(.gray)
             }.frame(height:200)
-           
+            
         }
         .padding()
     }
-
-
-
+    
+    
+    
 }
 
 
