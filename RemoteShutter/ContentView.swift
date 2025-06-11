@@ -35,19 +35,18 @@ struct ContentView: View {
     @State private var isShowingSheet = false
     @State private var filename: String = ""
     @State private var image: Data? = nil
-    @State var  unprocessedResponse: String = ""
     @State var fileList: [String] = []
     
     var body: some View {
         VStack {
             
-            Buttons(title: "test separate file func"){
+            Buttons(title: "asdasddas"){
                 Task{
-                    unprocessedResponse = await sendCmdRewrite(command: "ls /samba")
-                    fileList = unprocessedResponse.components(separatedBy: "\n").filter({!$0.isEmpty})
+                    let fileList = await separateFiles()
                     print(fileList)
                 }
             }
+            
             //test button
             Buttons(title: "test button"){
                 Task{
@@ -144,7 +143,5 @@ struct ContentView: View {
     
     
 }
-
-
 
 
