@@ -112,6 +112,7 @@ func sendCmdRewrite(command: String) async -> String{
 //    
 //}
 
+
 func separateFiles() async -> [String]{
         let unprocessedResponse = await sendCmdRewrite(command: "ls /samba")
         return unprocessedResponse.components(separatedBy: "\n").filter({!$0.isEmpty})

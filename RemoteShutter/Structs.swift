@@ -77,8 +77,8 @@ struct allButtons: View{
             VStack{
                 if let imageData = image, let uiImage = UIImage(data:imageData){
                     Image(uiImage: uiImage).resizable().scaledToFit()
-                }else{
-                    Text("loading").onAppear{
+                }else if !filename.isEmpty{
+                    ProgressView().onAppear{
                         Task {
                             print("fetching image")
                             image = await getPicture(filePath: filename)
@@ -90,6 +90,8 @@ struct allButtons: View{
                             }
                         }
                     }
+                }else{
+                    Text("No Image")
                 }
             }.onAppear{
                 image = nil
@@ -102,7 +104,9 @@ struct allButtons: View{
         }.alert("Shutdown", isPresented: $isShowingShutdown){
             Button("Shutdown"){
                 Task{
+                    filename = ""
                     output = await sendCmdRewrite(command:"sudo shutdown -h now")
+                    
                 }
             }
             Button("Cancel", role: .cancel){
@@ -111,3 +115,85 @@ struct allButtons: View{
         }
     }
 }
+
+//struct cameraControls: View{
+//    @Binding var currentPath = [CC]
+//    var body: some view{
+//        
+//    }
+//}
+
+struct cameraControls: View{
+    @State private var output: String = ""
+    @State private var isShowingEnterVal: Bool = false
+    @State private var isShowingShutdown: Bool = false
+    @State private var seconds: String = ""
+    @State private var isShowingSheet = false
+    @State private var filename: String = ""
+    @State private var image: Data? = nil
+    @State private var fileList: [String] = []
+    var body: some View{
+        VStack{
+            allButtons(output: $output, isShowingEnterVal: $isShowingEnterVal, isShowingShutdown: $isShowingShutdown, seconds: $seconds, isShowingSheet: $isShowingSheet, filename: $filename, image: $image, fileList: $fileList)
+            ScrollView{
+                Text(output)
+                    .padding()
+                    .foregroundColor(.gray)
+            }.frame(height:200)
+            
+        }.padding()
+    }
+}
+
+struct viewGallery: View{
+    @Binding var fileList: [String]
+    @State private var images: [String:UIImage] = [:]
+    @StateObject private var imageLoader = ImageLoader()
+
+    let columns = [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
+    var body: some View{
+        ScrollView{
+            LazyVGrid(columns: columns ){
+                
+                ForEach(fileList, id: \.self ){fileName in
+                    VStack{
+                        if let image = imageLoader.images[fileName] {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                        } else {
+                            ProgressView()
+                                .task {
+                                    await imageLoader.loadImage(filename: fileName)
+                                }
+                        }
+                        Text(fileName)
+                            .foregroundStyle(.white)
+                    }
+                }
+            }
+        }
+        .padding()
+        .onAppear(){
+            Task{
+                fileList = await separateFiles()
+            }
+        }
+        
+    }
+    
+}
+@MainActor
+class ImageLoader: ObservableObject {
+    @Published var images: [String: UIImage] = [:]
+
+    func loadImage(filename: String) async {
+        if let data = await getPicture(filePath: "/samba/\(filename)"),
+           let uiImage = UIImage(data: data) {
+            DispatchQueue.main.async {
+                self.images[filename] = uiImage
+            }
+        }
+    }
+}
+
